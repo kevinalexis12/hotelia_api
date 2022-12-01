@@ -15,8 +15,8 @@ const userSchema = new Schema({
   img: String,
   reserva: [
     {
-      type: Schema.type.Objectid,
-      ref: "Reservas",
+      type: Schema.Types.ObjectId,
+      ref: "Reservas",z
     },
   ],
 });

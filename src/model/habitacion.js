@@ -15,9 +15,13 @@ const habitacionSchema = new Schema({
   estado: String,
   reserva: [
     {
-      type: Schema.type.ObjectId,
+      type: Schema.Types.ObjectId,
       ref: "Reservas",
     },
   ]
 })
+
+habitacionSchema.methods.setImg =function set( filename ){
+  this.img =`/public/${filename}`
+}
 moduleexports=model("Habitacion",habitacionSchema)
